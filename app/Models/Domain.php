@@ -9,10 +9,10 @@ class Domain extends Model
 {
     use HasFactory;
 
-    // Table name if not using the default plural form
+    // Tentukan nama tabel jika berbeda dari default plural form
     protected $table = 'domains';
 
-    // Fillable attributes for mass assignment
+    // Kolom yang bisa diisi (mass assignment)
     protected $fillable = [
         'name',
         'user_id',
@@ -21,15 +21,18 @@ class Domain extends Model
         'status',
     ];
 
-    // Casting attributes to specific types
+    // Casting atribut ke tipe data spesifik
     protected $casts = [
         'registration_date' => 'date',
         'expiration_date' => 'date',
     ];
 
-    // Define relationships
+    // Relasi dengan model User
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
+    // Aktifkan timestamps jika menggunakan created_at dan updated_at
+    public $timestamps = true;
 }

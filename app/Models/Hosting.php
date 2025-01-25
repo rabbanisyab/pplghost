@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hosting extends Model
 {
+
     use HasFactory;
 
     // Table name if not using the default plural form

@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
+
     use HasFactory;
 
     // Table name if not using the default plural form
@@ -29,6 +29,5 @@ class Role extends Model
 {
     return $this->belongsToMany(User::class);
 }
-
 
 }
