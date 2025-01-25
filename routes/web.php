@@ -3,8 +3,14 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\DomainController;
+use App\Http\Controllers\HostingController;
+use App\Http\Controllers\TransactionController;
 
 Route::resource('roles', RoleController::class);
+Route::resource('domains', DomainController::class);
+Route::resource('hostings', HostingController::class);
+Route::resource('transactions', TransactionController::class);
 
 Route::get('/', function () {
     return view('welcome');
